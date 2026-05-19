@@ -520,6 +520,95 @@
   .goal-btn:active{transform:scale(.97);background:#D9EEE3}
   .goal-btn.amber{background:var(--amber-soft);color:#9A6500}
   .goal-btn.amber:active{background:#FCE9BC}
+  .goal-card.completed{background:linear-gradient(135deg,#F0FBF5,#fff);border-color:#B3DFC9;}
+  .goal-card.completed .gdate{color:var(--green)}
+  .goal-reached{margin-top:12px;padding:10px;background:var(--green-soft);border-radius:12px;text-align:center;font-size:13px;font-weight:700;color:var(--green-deep)}
+
+  /* ---- Add Funds Sheet ---- */
+  .gf-head{padding:0 22px 16px;display:flex;align-items:center;gap:14px}
+  .gf-emoji{font-size:32px;line-height:1;flex-shrink:0}
+  .gf-info{flex:1;min-width:0}
+  .gf-info .gn{font-size:16px;font-weight:700;letter-spacing:-.2px}
+  .gf-info .gp{font-size:12px;color:var(--muted);font-weight:500;margin-top:2px}
+  .gf-mini-bar{height:6px;background:var(--line-2);border-radius:99px;overflow:hidden;margin-top:8px}
+  .gf-mini-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#00B677,var(--green));transition:width .6s var(--ease)}
+  .gf-mini-fill.amber{background:linear-gradient(90deg,#FBBF24,var(--amber))}
+  .gf-mini-fill.near{background:linear-gradient(90deg,#34D399,#00875A)}
+  .gf-display{font-size:52px;font-weight:800;letter-spacing:-2px;text-align:center;padding:14px 22px 8px;color:var(--ink);min-height:82px}
+  .gf-display .gf-pl{color:var(--muted-2)}
+  .quick-amts{display:flex;gap:8px;padding:0 22px 14px}
+  .quick-amt{flex:1;padding:10px 0;border:1.5px solid var(--line);border-radius:12px;font-size:13px;font-weight:700;color:var(--ink-2);background:#fff;transition:border-color .2s,background .2s,color .2s}
+  .quick-amt.sel{border-color:var(--green);background:var(--green-soft);color:var(--green-deep)}
+  .quick-amt:active{transform:scale(.96)}
+  .gf-keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:0 22px}
+  .gf-key{height:52px;border-radius:12px;font-size:20px;font-weight:600;color:var(--ink);background:none;transition:background .15s}
+  .gf-key:active{background:var(--line-2)}
+  .gf-key.fn{color:var(--muted);font-size:13px}
+  .gf-cta-row{padding:14px 22px 0}
+  .gf-cta{width:100%;padding:16px;border-radius:var(--radius);background:linear-gradient(135deg,#00B677,var(--green));color:#fff;font-size:16px;font-weight:700;letter-spacing:-.2px;box-shadow:0 10px 24px -8px rgba(0,135,90,.55);transition:transform .2s var(--ease),box-shadow .2s var(--ease);display:flex;align-items:center;justify-content:center;gap:8px}
+  .gf-cta:active{transform:scale(.98);box-shadow:0 4px 12px -4px rgba(0,135,90,.4)}
+  .gf-cta:disabled{background:var(--line);box-shadow:none;color:var(--muted);cursor:default}
+  .gf-success{display:none;padding:32px 22px 8px;flex-direction:column;align-items:center;gap:10px;text-align:center}
+  .gf-success.show{display:flex}
+  .gf-check{width:64px;height:64px;border-radius:50%;background:var(--green);display:grid;place-items:center;animation:popIn .5s var(--ease) both}
+  @keyframes popIn{0%{transform:scale(0);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+  .gf-success .st{font-size:20px;font-weight:800;letter-spacing:-.4px;margin-top:4px}
+  .gf-success .ss{font-size:14px;color:var(--muted);font-weight:500}
+
+  /* ---- Goal Detail Sheet ---- */
+  .gd-hero{padding:20px 22px 14px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+  .gd-emoji{font-size:52px;line-height:1}
+  .gd-name{font-size:22px;font-weight:800;letter-spacing:-.5px;margin-top:8px}
+  .gd-status{font-size:12.5px;font-weight:600;color:var(--muted)}
+  .gd-ring-wrap{display:flex;justify-content:center;padding:4px 22px 14px;position:relative}
+  .gd-ring-svg{width:180px;height:180px}
+  .gd-ring-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+  .gd-ring-pct{font-size:34px;font-weight:800;letter-spacing:-1.5px;color:var(--ink)}
+  .gd-ring-lbl{font-size:11px;font-weight:500;color:var(--muted);margin-top:2px}
+  .gd-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;margin:0 22px 18px;background:var(--line);border-radius:var(--radius-sm);overflow:hidden}
+  .gd-stat{background:#fff;padding:12px 10px;text-align:center}
+  .gd-stat .v{font-size:15px;font-weight:700;letter-spacing:-.4px;color:var(--ink)}
+  .gd-stat .l{font-size:10.5px;font-weight:500;color:var(--muted);margin-top:2px}
+  .gd-section-lbl{padding:0 22px 8px;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
+  .gd-boost-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 22px 18px}
+  .gd-boost{padding:11px 0;border-radius:12px;font-size:13px;font-weight:700;background:var(--green-soft);color:var(--green-deep);border:1.5px solid transparent;transition:border-color .2s,background .2s,transform .18s}
+  .gd-boost:active{transform:scale(.95)}
+  .gd-boost.custom{background:var(--line-2);color:var(--ink-2)}
+  .gd-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 22px 4px}
+  .gd-action{padding:13px;border-radius:var(--radius-sm);font-size:13.5px;font-weight:700;border:1.5px solid var(--line);color:var(--ink-2);background:#fff;display:flex;align-items:center;justify-content:center;gap:6px;transition:background .2s}
+  .gd-action:active{background:var(--line-2)}
+  .gd-action.del{border-color:#FBCFCF;color:var(--red);background:var(--red-soft)}
+  .gd-action.del:active{background:#FBCFCF}
+
+  /* ---- New Goal Sheet ---- */
+  .ng-step{padding:0 22px}
+  .ng-label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;margin-top:18px}
+  .ng-input{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--radius-sm);font-family:inherit;font-size:16px;font-weight:600;color:var(--ink);background:#fff;outline:none;transition:border-color .2s;box-sizing:border-box}
+  .ng-input:focus{border-color:var(--green)}
+  .ng-input::placeholder{color:var(--muted-2);font-weight:400}
+  .emoji-picker{display:flex;flex-wrap:wrap;gap:8px}
+  .ep-btn{width:46px;height:46px;border-radius:14px;font-size:24px;background:var(--line-2);border:2px solid transparent;display:grid;place-items:center;transition:border-color .18s,background .18s,transform .18s}
+  .ep-btn.sel{border-color:var(--green);background:var(--green-soft);transform:scale(1.08)}
+  .ep-btn:active{transform:scale(.93)}
+  .ng-amt-display{font-size:44px;font-weight:800;letter-spacing:-2px;text-align:center;padding:14px 22px 8px;color:var(--ink)}
+  .ng-amt-display .pl{color:var(--muted-2);font-size:30px;font-weight:700}
+  .ng-keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:0 22px}
+  .ng-key{height:50px;border-radius:10px;font-size:19px;font-weight:600;color:var(--ink);background:none;transition:background .15s}
+  .ng-key:active{background:var(--line-2)}
+  .ng-key.fn{color:var(--muted);font-size:13px}
+  .deadline-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .dl-chip{padding:8px 14px;border:1.5px solid var(--line);border-radius:99px;font-size:13px;font-weight:600;color:var(--ink-2);background:#fff;transition:border-color .2s,background .2s,color .2s}
+  .dl-chip.sel{border-color:var(--green);background:var(--green);color:#fff}
+  .dl-chip:active{transform:scale(.95)}
+  .ng-cta-row{padding:18px 22px 0}
+  .ng-cta{width:100%;padding:16px;border-radius:var(--radius);background:linear-gradient(135deg,#00B677,var(--green));color:#fff;font-size:16px;font-weight:700;box-shadow:0 10px 24px -8px rgba(0,135,90,.55);transition:transform .2s var(--ease);display:flex;align-items:center;justify-content:center;gap:8px}
+  .ng-cta:active{transform:scale(.98)}
+  .ng-cta:disabled{background:var(--line);box-shadow:none;color:var(--muted);cursor:default}
+  .ng-cta.ghost{background:none;box-shadow:none;color:var(--ink-2);border:1.5px solid var(--line)}
+  .goals-empty{text-align:center;padding:48px 22px 24px}
+  .goals-empty .ge-ico{font-size:48px;margin-bottom:12px}
+  .goals-empty .ge-t{font-size:18px;font-weight:700;letter-spacing:-.3px}
+  .goals-empty .ge-s{font-size:14px;color:var(--muted);margin-top:6px;font-weight:500}
 
   .suggested{
     margin: 18px 22px 0;
@@ -1472,86 +1561,11 @@
               <div class="greet">Saving for what matters</div>
               <h1>Your goals</h1>
             </div>
-            <button class="avatar" style="background:var(--line-2);color:var(--ink)" aria-label="settings">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            <button class="avatar" style="background:var(--green);color:#fff" aria-label="New goal" id="newGoalBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
           </div>
-
-          <!-- Goal 1: Emergency fund -->
-          <div class="goal-card">
-            <div class="between">
-              <div>
-                <div class="gname">Emergency fund</div>
-                <div class="gdate">On track · Complete by Dec 2026</div>
-              </div>
-              <div style="font-size:28px;line-height:1">🛡️</div>
-            </div>
-            <div class="goal-progress"><div class="goal-fill" style="width:64%"></div></div>
-            <div class="goal-meta">
-              <div class="amt num">€3.200 <span class="of">/ €5.000</span></div>
-              <div class="pct">64%</div>
-            </div>
-            <button class="goal-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              Add funds
-            </button>
-          </div>
-
-          <!-- Goal 2: Japan trip -->
-          <div class="goal-card">
-            <div class="between">
-              <div>
-                <div class="gname">Japan trip 🇯🇵</div>
-                <div class="gdate">Slightly behind · Target Oct 2026</div>
-              </div>
-              <div style="font-size:28px;line-height:1">✈️</div>
-            </div>
-            <div class="goal-progress"><div class="goal-fill amber" style="width:34%"></div></div>
-            <div class="goal-meta">
-              <div class="amt num">€840 <span class="of">/ €2.500</span></div>
-              <div class="pct amber">34%</div>
-            </div>
-            <button class="goal-btn amber">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              Boost this goal
-            </button>
-          </div>
-
-          <!-- Goal 3: New laptop -->
-          <div class="goal-card">
-            <div class="between">
-              <div>
-                <div class="gname">New laptop</div>
-                <div class="gdate">Almost there · Just 2 weeks left 🎉</div>
-              </div>
-              <div style="font-size:28px;line-height:1">💻</div>
-            </div>
-            <div class="goal-progress"><div class="goal-fill near" style="width:79%"></div></div>
-            <div class="goal-meta">
-              <div class="amt num">€1.100 <span class="of">/ €1.400</span></div>
-              <div class="pct near">79%</div>
-            </div>
-            <button class="goal-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              Add funds
-            </button>
-          </div>
-
-          <div class="section-head">
-            <h2>Suggested for you</h2>
-          </div>
-          <div class="suggested">
-            <div class="icn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <div class="text">
-              <div class="t">Build a 3-month runway</div>
-              <div class="s">€9.600 target · Set €400/month aside</div>
-            </div>
-            <button class="cta">Start</button>
-          </div>
-
-          <div style="height:24px"></div>
+          <!-- Goal cards injected by renderGoals() -->
         </section>
 
         <!-- ============================ INSIGHTS ============================ -->
@@ -1933,6 +1947,187 @@
           </button>
         </div>
         <div style="height:18px"></div>
+      </div>
+    </div>
+
+    <!-- ============ Add Funds Sheet ============ -->
+    <div class="sheet" id="addFundsSheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head">
+        <div class="ttl" id="afTitle">Add funds</div>
+        <button class="sheet-close" id="addFundsClose">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+        </button>
+      </div>
+      <div class="sheet-body">
+        <div class="gf-head">
+          <div class="gf-emoji" id="afEmoji">🛡️</div>
+          <div class="gf-info">
+            <div class="gn" id="afGoalName">Emergency fund</div>
+            <div class="gp"><span id="afSaved">€3.200</span> saved · <span id="afPct">64%</span></div>
+            <div class="gf-mini-bar"><div class="gf-mini-fill" id="afMiniBar" style="width:64%"></div></div>
+          </div>
+        </div>
+        <div id="afInputArea">
+          <div class="gf-display"><span class="gf-pl">€</span><span id="afDisplay">0</span></div>
+          <div class="quick-amts">
+            <button class="quick-amt" data-qa="50">+€50</button>
+            <button class="quick-amt" data-qa="100">+€100</button>
+            <button class="quick-amt" data-qa="200">+€200</button>
+          </div>
+          <div class="gf-keypad">
+            <button class="gf-key" data-gk="1">1</button><button class="gf-key" data-gk="2">2</button><button class="gf-key" data-gk="3">3</button>
+            <button class="gf-key" data-gk="4">4</button><button class="gf-key" data-gk="5">5</button><button class="gf-key" data-gk="6">6</button>
+            <button class="gf-key" data-gk="7">7</button><button class="gf-key" data-gk="8">8</button><button class="gf-key" data-gk="9">9</button>
+            <button class="gf-key fn" data-gk=",">,</button>
+            <button class="gf-key" data-gk="0">0</button>
+            <button class="gf-key fn" data-gk="del"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 4H8l-7 8 7 8h13a2 2 0 002-2V6a2 2 0 00-2-2z"/><line x1="18" y1="9" x2="12" y2="15"/><line x1="12" y1="9" x2="18" y2="15"/></svg></button>
+          </div>
+          <div class="gf-cta-row">
+            <button class="gf-cta" id="afSaveBtn" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add to savings
+            </button>
+          </div>
+        </div>
+        <div class="gf-success" id="afSuccess">
+          <div class="gf-check">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="st" id="afSuccessTitle">Nice one!</div>
+          <div class="ss" id="afSuccessMsg">€100 added to Emergency fund</div>
+        </div>
+        <div style="height:24px"></div>
+      </div>
+    </div>
+
+    <!-- ============ Goal Detail Sheet ============ -->
+    <div class="sheet" id="goalDetailSheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head">
+        <div class="ttl">Goal details</div>
+        <button class="sheet-close" id="goalDetailClose">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+        </button>
+      </div>
+      <div class="sheet-body">
+        <div class="gd-hero">
+          <div class="gd-emoji" id="gdEmoji">🛡️</div>
+          <div class="gd-name" id="gdName">Emergency fund</div>
+          <div class="gd-status" id="gdStatus">On track · Complete by Dec 2026</div>
+        </div>
+        <div class="gd-ring-wrap">
+          <svg class="gd-ring-svg" viewBox="0 0 180 180">
+            <circle cx="90" cy="90" r="70" fill="none" stroke="var(--line-2)" stroke-width="14"/>
+            <circle cx="90" cy="90" r="70" fill="none" stroke="var(--green)" stroke-width="14"
+              stroke-linecap="round" id="gdRingArc"
+              transform="rotate(-90 90 90)"
+              stroke-dasharray="0 439.8"
+              style="transition:stroke-dasharray .9s var(--ease)"/>
+          </svg>
+          <div class="gd-ring-center">
+            <div class="gd-ring-pct" id="gdRingPct">0%</div>
+            <div class="gd-ring-lbl">saved</div>
+          </div>
+        </div>
+        <div class="gd-stats">
+          <div class="gd-stat"><div class="v num" id="gdStatSaved">€0</div><div class="l">Saved</div></div>
+          <div class="gd-stat"><div class="v num" id="gdStatRemaining">€0</div><div class="l">Remaining</div></div>
+          <div class="gd-stat"><div class="v num" id="gdStatTarget">€0</div><div class="l">Target</div></div>
+        </div>
+        <div class="gd-section-lbl">Quick boost</div>
+        <div class="gd-boost-row">
+          <button class="gd-boost" data-boost="50">+€50</button>
+          <button class="gd-boost" data-boost="100">+€100</button>
+          <button class="gd-boost" data-boost="200">+€200</button>
+          <button class="gd-boost custom" data-boost="custom">Custom</button>
+        </div>
+        <div class="gd-actions">
+          <button class="gd-action" id="gdEditBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Edit goal
+          </button>
+          <button class="gd-action del" id="gdDeleteBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
+            Delete
+          </button>
+        </div>
+        <div style="height:28px"></div>
+      </div>
+    </div>
+
+    <!-- ============ New Goal Sheet ============ -->
+    <div class="sheet" id="newGoalSheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head">
+        <div class="ttl" id="ngTitle">New goal</div>
+        <button class="sheet-close" id="newGoalClose">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+        </button>
+      </div>
+      <div class="sheet-body">
+        <!-- Step 1 -->
+        <div id="ngStep1">
+          <div class="stepper"><i class="active"></i><i></i></div>
+          <div class="ng-step">
+            <div class="ng-label">Goal name</div>
+            <input class="ng-input" id="ngNameInput" placeholder="e.g. Holiday in Bali…" maxlength="32">
+            <div class="ng-label">Pick an emoji</div>
+            <div class="emoji-picker" id="emojiPicker">
+              <button class="ep-btn sel" data-ep="🎯">🎯</button>
+              <button class="ep-btn" data-ep="✈️">✈️</button>
+              <button class="ep-btn" data-ep="🏠">🏠</button>
+              <button class="ep-btn" data-ep="💻">💻</button>
+              <button class="ep-btn" data-ep="🎓">🎓</button>
+              <button class="ep-btn" data-ep="🚗">🚗</button>
+              <button class="ep-btn" data-ep="🛡️">🛡️</button>
+              <button class="ep-btn" data-ep="🌴">🌴</button>
+              <button class="ep-btn" data-ep="💍">💍</button>
+              <button class="ep-btn" data-ep="🎸">🎸</button>
+              <button class="ep-btn" data-ep="🏋️">🏋️</button>
+              <button class="ep-btn" data-ep="🐶">🐶</button>
+            </div>
+            <div class="ng-label">Target amount</div>
+          </div>
+          <div class="ng-amt-display"><span class="pl">€</span><span id="ngAmtDisplay">0</span></div>
+          <div class="ng-keypad">
+            <button class="ng-key" data-nk="1">1</button><button class="ng-key" data-nk="2">2</button><button class="ng-key" data-nk="3">3</button>
+            <button class="ng-key" data-nk="4">4</button><button class="ng-key" data-nk="5">5</button><button class="ng-key" data-nk="6">6</button>
+            <button class="ng-key" data-nk="7">7</button><button class="ng-key" data-nk="8">8</button><button class="ng-key" data-nk="9">9</button>
+            <button class="ng-key fn" data-nk=",">,</button>
+            <button class="ng-key" data-nk="0">0</button>
+            <button class="ng-key fn" data-nk="del"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 4H8l-7 8 7 8h13a2 2 0 002-2V6a2 2 0 00-2-2z"/><line x1="18" y1="9" x2="12" y2="15"/><line x1="12" y1="9" x2="18" y2="15"/></svg></button>
+          </div>
+          <div class="ng-cta-row">
+            <button class="ng-cta" id="ngStep1Next" disabled>Continue →</button>
+          </div>
+          <div style="height:20px"></div>
+        </div>
+        <!-- Step 2 -->
+        <div id="ngStep2" style="display:none">
+          <div class="stepper"><i class="done"></i><i class="active"></i></div>
+          <div class="ng-step">
+            <div class="ng-label">Target date</div>
+            <div class="deadline-chips" id="deadlineChips"></div>
+            <div style="height:16px"></div>
+          </div>
+          <div class="ng-cta-row" style="display:grid;grid-template-columns:1fr 2fr;gap:10px">
+            <button class="ng-cta ghost" id="ngStep2Back">Back</button>
+            <button class="ng-cta" id="ngSaveBtn" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Create goal
+            </button>
+          </div>
+          <div style="height:20px"></div>
+        </div>
+        <!-- Success -->
+        <div class="gf-success" id="ngSuccess">
+          <div class="gf-check">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="st">Goal created! 🎯</div>
+          <div class="ss" id="ngSuccessMsg">Your new goal has been added.</div>
+        </div>
       </div>
     </div>
 
@@ -2799,7 +2994,7 @@ function go(name){
     $$('.bar-fill').forEach((b,i)=>{ b.style.animation='none'; void b.offsetWidth; b.style.animation=''; });
   }
   // Show / hide Add FAB
-  const showFab = name === 'home' || name === 'transactions';
+  const showFab = name === 'home' || name === 'transactions' || name === 'goals';
   const fab = $('#addFab');
   fab.style.display = showFab ? 'grid' : 'none';
   // scroll reset
@@ -2980,12 +3175,283 @@ function saveTransaction(){
 }
 
 /* =========================================================
+   GOALS — data & logic
+   ========================================================= */
+let GOALS = [
+  { id:'g1', name:'Emergency fund', emoji:'🛡️', saved:3200, target:5000, color:'green', deadline:'Dec 2026', monthsLeft:7 },
+  { id:'g2', name:'Japan trip',     emoji:'✈️', saved:840,  target:2500, color:'amber', deadline:'Oct 2026', monthsLeft:5 },
+  { id:'g3', name:'New laptop',     emoji:'💻', saved:1100, target:1400, color:'near',  deadline:'Jun 2026', monthsLeft:1 },
+];
+
+function goalStatus(g){
+  const pct = g.saved / g.target;
+  if(pct >= 1)   return { text:'Goal reached! 🏆', cls:'near' };
+  if(pct >= 0.8) return { text:'Almost there · Just weeks left 🎉', cls:'near' };
+  if(pct < 0.5 && g.monthsLeft <= 3) return { text:`Slightly behind · Target ${g.deadline}`, cls:'amber' };
+  return { text:`On track · Complete by ${g.deadline}`, cls:'' };
+}
+
+function fmtGoalAmt(n){
+  return '€' + Math.round(n).toLocaleString('de-DE');
+}
+
+function renderGoals(){
+  const container = $('#screen-goals');
+  container.querySelectorAll('.goal-card, .section-head, .suggested, .goals-empty, .goals-bottom').forEach(el=>el.remove());
+  const topbar = container.querySelector('.topbar');
+
+  if(GOALS.length === 0){
+    const empty = document.createElement('div');
+    empty.className = 'goals-empty';
+    empty.innerHTML = `<div class="ge-ico">🎯</div><div class="ge-t">No goals yet</div><div class="ge-s">Tap the + button to create your first saving goal.</div>`;
+    topbar.insertAdjacentElement('afterend', empty);
+  } else {
+    // Insert in reverse so they appear top-to-bottom after topbar
+    [...GOALS].reverse().forEach(g => {
+      const pct = Math.min(100, Math.round(g.saved / g.target * 100));
+      const st  = goalStatus(g);
+      const fillCls = g.color === 'amber' ? 'amber' : g.color === 'near' ? 'near' : '';
+      const pctCls  = g.color === 'amber' ? 'amber' : pct >= 80 ? 'near' : '';
+      const card = document.createElement('div');
+      card.className = 'goal-card' + (pct >= 100 ? ' completed' : '');
+      card.dataset.gid = g.id;
+      card.innerHTML = `
+        <div class="between" style="cursor:pointer" data-open-detail="${g.id}">
+          <div style="flex:1;min-width:0">
+            <div class="gname">${g.name}</div>
+            <div class="gdate ${st.cls}">${st.text}</div>
+          </div>
+          <div style="font-size:28px;line-height:1;margin-left:10px">${g.emoji}</div>
+        </div>
+        <div class="goal-progress"><div class="goal-fill ${fillCls}" style="width:${pct}%"></div></div>
+        <div class="goal-meta">
+          <div class="amt num">${fmtGoalAmt(g.saved)} <span class="of">/ ${fmtGoalAmt(g.target)}</span></div>
+          <div class="pct ${pctCls}">${pct}%</div>
+        </div>
+        ${pct < 100
+          ? `<button class="goal-btn ${g.color==='amber'?'amber':''}" data-add-funds="${g.id}">
+               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+               ${g.color==='amber' ? 'Boost this goal' : 'Add funds'}
+             </button>`
+          : `<div class="goal-reached">🏆 Goal reached! Time to celebrate.</div>`
+        }`;
+      topbar.insertAdjacentElement('afterend', card);
+    });
+  }
+
+  // Suggested section + bottom spacer
+  const bottom = document.createElement('div');
+  bottom.className = 'goals-bottom';
+  bottom.innerHTML = `
+    <div class="section-head"><h2>Suggested for you</h2></div>
+    <div class="suggested">
+      <div class="icn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <div class="text"><div class="t">Build a 3-month runway</div><div class="s">€9.600 target · Set €400/month aside</div></div>
+      <button class="cta" id="suggestedStart">Start</button>
+    </div>
+    <div style="height:24px"></div>`;
+  container.appendChild(bottom);
+
+  // Wire up freshly rendered buttons
+  container.querySelectorAll('[data-add-funds]').forEach(btn => {
+    btn.addEventListener('click', e => { e.stopPropagation(); openAddFunds(btn.dataset.addFunds); });
+  });
+  container.querySelectorAll('[data-open-detail]').forEach(el => {
+    el.addEventListener('click', () => openGoalDetail(el.dataset.openDetail));
+  });
+  const ss = $('#suggestedStart');
+  if(ss) ss.addEventListener('click', () => openNewGoal({ name:'3-month runway', emoji:'🎯', target:9600 }));
+}
+
+/* ---- Add Funds ---- */
+const afState = { goalId:null, amount:'', amountRaw:0 };
+
+function openAddFunds(goalId){
+  const g = GOALS.find(x=>x.id===goalId);
+  if(!g) return;
+  afState.goalId = goalId;
+  afState.amount = '';
+  afState.amountRaw = 0;
+  const pct = Math.min(100, Math.round(g.saved / g.target * 100));
+  $('#afEmoji').textContent = g.emoji;
+  $('#afGoalName').textContent = g.name;
+  $('#afSaved').textContent = fmtGoalAmt(g.saved);
+  $('#afPct').textContent = pct + '%';
+  const bar = $('#afMiniBar');
+  bar.style.width = pct + '%';
+  bar.className = 'gf-mini-fill' + (g.color==='amber'?' amber': g.color==='near'?' near':'');
+  $('#afDisplay').textContent = '0';
+  $('#afSaveBtn').disabled = true;
+  $$('.quick-amt').forEach(b=>b.classList.remove('sel'));
+  $('#afInputArea').style.display = '';
+  $('#afSuccess').classList.remove('show');
+  openSheet('addFundsSheet');
+}
+
+function afPressKey(k){
+  if(k === 'del'){
+    afState.amount = afState.amount.slice(0,-1);
+  } else if(k === ','){
+    if(!afState.amount.includes('.')) afState.amount = (afState.amount||'0') + '.';
+  } else {
+    if(afState.amount === '0') afState.amount = k;
+    else {
+      if(afState.amount.includes('.')){ const [,b]=afState.amount.split('.'); if(b&&b.length>=2) return; }
+      if(!afState.amount.includes('.') && afState.amount.split('.')[0].length>=5) return;
+      afState.amount += k;
+    }
+  }
+  afState.amountRaw = parseFloat(afState.amount||'0')||0;
+  $('#afDisplay').textContent = (afState.amount||'0').replace('.',',');
+  $('#afSaveBtn').disabled = afState.amountRaw <= 0;
+  $$('.quick-amt').forEach(b=>b.classList.remove('sel'));
+}
+
+function afSetQuick(amt){
+  afState.amount = String(amt);
+  afState.amountRaw = amt;
+  $('#afDisplay').textContent = amt.toLocaleString('de-DE');
+  $('#afSaveBtn').disabled = false;
+  $$('.quick-amt').forEach(b=>b.classList.toggle('sel', parseInt(b.dataset.qa)===amt));
+}
+
+function saveGoalFunds(){
+  const g = GOALS.find(x=>x.id===afState.goalId);
+  if(!g || afState.amountRaw<=0) return;
+  const added = afState.amountRaw;
+  g.saved = Math.min(g.target, g.saved + added);
+  const newPct = Math.min(100, Math.round(g.saved/g.target*100));
+  // Update mini bar
+  $('#afMiniBar').style.width = newPct + '%';
+  $('#afSaved').textContent = fmtGoalAmt(g.saved);
+  $('#afPct').textContent = newPct + '%';
+  // Success
+  $('#afInputArea').style.display = 'none';
+  $('#afSuccessTitle').textContent = newPct>=100 ? '🏆 Goal reached!' : 'Nice one!';
+  $('#afSuccessMsg').textContent   = newPct>=100
+    ? `You completed "${g.name}"!`
+    : `${fmtGoalAmt(added)} added to ${g.name}`;
+  $('#afSuccess').classList.add('show');
+  renderGoals();
+  setTimeout(()=>{ closeSheets(); }, 1900);
+}
+
+/* ---- Goal Detail ---- */
+let gdCurrentId = null;
+
+function openGoalDetail(goalId){
+  const g = GOALS.find(x=>x.id===goalId);
+  if(!g) return;
+  gdCurrentId = goalId;
+  const pct  = Math.min(100, Math.round(g.saved/g.target*100));
+  const circ = 2*Math.PI*70; // ≈439.8
+  $('#gdEmoji').textContent  = g.emoji;
+  $('#gdName').textContent   = g.name;
+  $('#gdStatus').textContent = goalStatus(g).text;
+  const arc = $('#gdRingArc');
+  arc.style.stroke = g.color==='amber' ? 'var(--amber)' : 'var(--green)';
+  arc.style.strokeDasharray = '0 439.8';
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      arc.style.strokeDasharray = `${(pct/100)*circ} ${circ}`;
+    });
+  });
+  $('#gdRingPct').textContent      = pct + '%';
+  $('#gdStatSaved').textContent     = fmtGoalAmt(g.saved);
+  $('#gdStatRemaining').textContent = fmtGoalAmt(Math.max(0, g.target-g.saved));
+  $('#gdStatTarget').textContent    = fmtGoalAmt(g.target);
+  openSheet('goalDetailSheet');
+}
+
+/* ---- New Goal ---- */
+const ngState = { name:'', emoji:'🎯', amount:'', amountRaw:0, deadline:'', monthsLeft:0 };
+
+const DEADLINE_OPTS = [
+  {label:'Jun 2026',months:1},{label:'Jul 2026',months:2},{label:'Aug 2026',months:3},
+  {label:'Sep 2026',months:4},{label:'Oct 2026',months:5},{label:'Nov 2026',months:6},
+  {label:'Dec 2026',months:7},{label:'Mar 2027',months:10},{label:'Jun 2027',months:13},
+  {label:'Dec 2027',months:19},{label:'Jun 2028',months:25},{label:'Dec 2028',months:31},
+];
+
+function openNewGoal(preset={}){
+  ngState.name=''; ngState.emoji='🎯'; ngState.amount=''; ngState.amountRaw=0; ngState.deadline=''; ngState.monthsLeft=0;
+  $('#ngNameInput').value = preset.name||'';
+  $$('.ep-btn').forEach(b=>b.classList.toggle('sel', b.dataset.ep==='🎯'));
+  if(preset.target){
+    ngState.amount = String(preset.target);
+    ngState.amountRaw = preset.target;
+    $('#ngAmtDisplay').textContent = preset.target.toLocaleString('de-DE');
+  } else {
+    $('#ngAmtDisplay').textContent = '0';
+  }
+  // Build deadline chips
+  const dc = $('#deadlineChips');
+  dc.innerHTML='';
+  DEADLINE_OPTS.forEach(opt=>{
+    const b = document.createElement('button');
+    b.className = 'dl-chip';
+    b.textContent = opt.label;
+    b.addEventListener('click',()=>{
+      ngState.deadline = opt.label;
+      ngState.monthsLeft = opt.months;
+      $$('.dl-chip').forEach(x=>x.classList.remove('sel'));
+      b.classList.add('sel');
+      $('#ngSaveBtn').disabled = false;
+    });
+    dc.appendChild(b);
+  });
+  $('#ngStep1').style.display='';
+  $('#ngStep2').style.display='none';
+  $('#ngSuccess').classList.remove('show');
+  $('#ngTitle').textContent='New goal';
+  $('#ngSaveBtn').disabled=true;
+  updateNgStep1Btn();
+  openSheet('newGoalSheet');
+}
+
+function ngPressKey(k){
+  if(k==='del'){
+    ngState.amount=ngState.amount.slice(0,-1);
+  } else if(k===','){
+    if(!ngState.amount.includes('.')) ngState.amount=(ngState.amount||'0')+'.';
+  } else {
+    if(ngState.amount==='0') ngState.amount=k;
+    else {
+      if(ngState.amount.includes('.')){ const[,b]=ngState.amount.split('.'); if(b&&b.length>=2)return; }
+      if(!ngState.amount.includes('.')&&ngState.amount.split('.')[0].length>=6)return;
+      ngState.amount+=k;
+    }
+  }
+  ngState.amountRaw=parseFloat(ngState.amount||'0')||0;
+  $('#ngAmtDisplay').textContent=(ngState.amount||'0').replace('.',',');
+  updateNgStep1Btn();
+}
+
+function updateNgStep1Btn(){
+  $('#ngStep1Next').disabled = ngState.amountRaw<=0 || !$('#ngNameInput').value.trim();
+}
+
+function saveNewGoal(){
+  if(!ngState.deadline) return;
+  ngState.name = $('#ngNameInput').value.trim()||'My goal';
+  const color = ngState.monthsLeft<=2 ? 'near' : ngState.monthsLeft<=5 ? 'amber' : 'green';
+  GOALS.push({ id:'g'+Date.now(), name:ngState.name, emoji:ngState.emoji, saved:0,
+    target:ngState.amountRaw, color, deadline:ngState.deadline, monthsLeft:ngState.monthsLeft });
+  renderGoals();
+  $('#ngSuccessMsg').textContent = `${ngState.emoji} ${ngState.name} · ${fmtGoalAmt(ngState.amountRaw)} target`;
+  $('#ngStep2').style.display='none';
+  $('#ngSuccess').classList.add('show');
+  setTimeout(()=>{ closeSheets(); }, 1900);
+}
+
+/* =========================================================
    INIT
    ========================================================= */
 function init(){
   renderBars();
   renderHomeTx();
   renderTxGroups();
+  renderGoals();
   // Insights — uses Time Machine month
   applyMonth(monthIndex, {animate:false});
   setupTimeMachine();
@@ -3014,16 +3480,85 @@ function init(){
     renderTxGroups();
   });
 
-  // FAB
+  // FAB — context-aware (Goals screen → new goal, else → add transaction)
+  let currentScreen = 'home';
+  const _goOrig = go;
+  window.go = function(name){
+    currentScreen = name;
+    _goOrig(name);
+  };
+  $$('.tab').forEach(t=>{ t.addEventListener('click',()=>{ currentScreen=t.dataset.screen; }); });
+
   $('#addFab').addEventListener('click',()=>{
-    resetAddFlow();
-    openSheet('addSheet');
+    if(currentScreen==='goals'){ openNewGoal(); }
+    else { resetAddFlow(); openSheet('addSheet'); }
   });
 
   // Scrim & close
   $('#scrim').addEventListener('click', closeSheets);
   $('#addClose').addEventListener('click', closeSheets);
   $('#detailClose').addEventListener('click', closeSheets);
+
+  // Goals — sheet closes
+  $('#addFundsClose').addEventListener('click', closeSheets);
+  $('#goalDetailClose').addEventListener('click', closeSheets);
+  $('#newGoalClose').addEventListener('click', closeSheets);
+
+  // Goals — top-bar + button
+  $('#newGoalBtn').addEventListener('click', ()=>openNewGoal());
+
+  // Add Funds — keypad
+  $$('.gf-key').forEach(k=>k.addEventListener('click',()=>afPressKey(k.dataset.gk)));
+  $$('.quick-amt').forEach(b=>b.addEventListener('click',()=>afSetQuick(parseInt(b.dataset.qa))));
+  $('#afSaveBtn').addEventListener('click', saveGoalFunds);
+
+  // Goal Detail — boost buttons
+  $$('.gd-boost').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const v = b.dataset.boost;
+      if(v==='custom'){ closeSheets(); setTimeout(()=>openAddFunds(gdCurrentId),380); }
+      else {
+        const g = GOALS.find(x=>x.id===gdCurrentId);
+        if(!g) return;
+        const amt = parseInt(v);
+        g.saved = Math.min(g.target, g.saved+amt);
+        renderGoals();
+        openGoalDetail(gdCurrentId); // refresh ring
+      }
+    });
+  });
+  $('#gdEditBtn').addEventListener('click',()=>{
+    const g = GOALS.find(x=>x.id===gdCurrentId);
+    if(!g) return;
+    closeSheets();
+    setTimeout(()=>openNewGoal({ name:g.name, emoji:g.emoji, target:g.target, _editId:g.id }), 380);
+  });
+  $('#gdDeleteBtn').addEventListener('click',()=>{
+    GOALS = GOALS.filter(x=>x.id!==gdCurrentId);
+    renderGoals();
+    closeSheets();
+  });
+
+  // New Goal — keypad
+  $$('.ng-key').forEach(k=>k.addEventListener('click',()=>ngPressKey(k.dataset.nk)));
+  $('#ngNameInput').addEventListener('input', updateNgStep1Btn);
+  $$('.ep-btn').forEach(b=>b.addEventListener('click',()=>{
+    ngState.emoji = b.dataset.ep;
+    $$('.ep-btn').forEach(x=>x.classList.remove('sel'));
+    b.classList.add('sel');
+  }));
+  $('#ngStep1Next').addEventListener('click',()=>{
+    ngState.name = $('#ngNameInput').value.trim();
+    $('#ngStep1').style.display='none';
+    $('#ngStep2').style.display='';
+    $('#ngTitle').textContent='When by?';
+  });
+  $('#ngStep2Back').addEventListener('click',()=>{
+    $('#ngStep2').style.display='none';
+    $('#ngStep1').style.display='';
+    $('#ngTitle').textContent='New goal';
+  });
+  $('#ngSaveBtn').addEventListener('click', saveNewGoal);
 
   // Type toggle
   $$('#typeToggle button').forEach(b=>{
